@@ -33,17 +33,12 @@ public class DijkstraAlgorithm {
                 }
             }
         }
-
-        // Print the distances from the source to all vertices
         System.out.println("Shortest distances from source " + source + ":");
         for (int i = 0; i < n; i++) {
             System.out.println("To " + i + ": " + distance[i]);
         }
     }
-
-    public static void main(String[] args) {
-        // Example graph represented as an adjacency matrix
-        int[][] graph = {
+    public static void main(String[] args) {  
                 {0, 4, 0, 0, 0, 0, 0, 8, 0},
                 {4, 0, 8, 0, 0, 0, 0, 11, 0},
                 {0, 8, 0, 7, 0, 4, 0, 0, 2},
@@ -54,8 +49,7 @@ public class DijkstraAlgorithm {
                 {8, 11, 0, 0, 0, 0, 1, 0, 7},
                 {0, 0, 2, 0, 0, 0, 6, 7, 0}
         };
-
-        int source = 0; // Source vertex
+        int source = 0;
         dijkstra(graph, source);
     }
 }
